@@ -135,7 +135,7 @@ def turning_target(N=600, turn_start=400):
         if i >= turn_start:
             x += np.dot(gam, np.array([[.075, .075]]).T)
         simxs.append(x)
-    simxs = np.array(simxs)
+    simxs = np.asarray(simxs).squeeze()
 
     return simxs
 
